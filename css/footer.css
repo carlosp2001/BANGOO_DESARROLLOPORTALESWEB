@@ -1,0 +1,34 @@
+footer{
+    background: rgb(20, 20, 20);
+    width: 100%;
+    height: 120px;
+  }
+  
+  footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1%;
+  }
+  
+  .sociales{
+    width: 100%;
+    font-size: 28px;
+    margin: 10px;
+  }
+  
+  .sociales a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .copy{
+    font-size: 20px;
+    color: white;
+  }
+  
+  @media (max-width:1024px){
+    .sociales{
+      text-align: center;
+    }
+  }

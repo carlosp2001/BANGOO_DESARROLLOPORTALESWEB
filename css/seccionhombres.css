@@ -1,0 +1,94 @@
+@import url(./footer.css);
+@import url(./header.css);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'MyWebFont', Fallback, sans-serif;
+}
+
+.contenedor{
+  width: 100%;
+  margin: auto;
+}
+
+.encabezado{
+display: block;
+position:relative;
+width: 100%;
+height:max-content;
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*
+#menubuttons{
+  position: relative;
+  display:inline-flexbox;
+  margin-top: -6%;
+  margin-bottom:3.5%;
+  margin-left: 28%;
+  margin-right: auto;
+  word-wrap: break-word;
+  font-size: 2vw;
+  width: 60%;
+
+}
+
+
+
+#loginbutton{
+  margin-left:11%;
+  margin-right: 0%;
+}*/
+
+#textoentrada{
+  margin-top: 3%;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.3vw;
+  margin-bottom: 5.1%;
+}
+
+#productos{
+  color: #FFFFFF;
+  padding-top: 2%;
+  margin-top: 4.34%;
+  background: #000000;
+  box-shadow: 0% 0.68% 0.68% rgba(0, 0, 0, 0.25);
+  width: 93.84%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ropatitulos{
+  font-size: 5.4vw;
+  display: block;
+  margin-top: 2%;
+}
+
+.imgcatalogo{
+  width: 20vw;
+  margin-left: 1.4vw;
+  background: url(.png);
+  border: 0.5vw solid #FFFFFF;
+  box-sizing: border-box;
+
+}
+
+.contenedor2{
+  font-family: 'MyWebFont';
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
+
+h4{
+  text-align: center;
+}
+
+

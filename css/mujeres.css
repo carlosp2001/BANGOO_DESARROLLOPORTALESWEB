@@ -1,0 +1,41 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(banner.css);
+@import url(ProductoNuevo.css);
+@import url(ProductoVendido.css);
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('./fonts/Moon2.0/moon2.0-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('./fonts/Moon2.0/moon2.0-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/Moon2.0/moon2.0-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/Moon2.0/moon2.0-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('./fonts/Moon2.0/moon2.0-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/Moon2.0/moon2.0-regular-webfont.sbg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MyWebFont', Fallback, sans-serif;
+  }
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#bienvenidos {
+    text-align: center;
+}
+
+

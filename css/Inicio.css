@@ -1,0 +1,91 @@
+@import url(header.css);
+@import url(footer.css);
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('./fonts/Moon2.0/moon2.0-regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Moon2.0/moon2.0-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Moon2.0/moon2.0-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/Moon2.0/moon2.0-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/Moon2.0/moon2.0-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/Moon2.0/moon2.0-regular-webfont.sbg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'MyWebFont', Fallback, sans-serif;
+}
+
+section{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.contenedor{
+  width: 100%;
+  margin: auto;
+}
+
+/*Banner*/
+#banner{
+  margin-top: 75px;
+  position: relative;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+#banner img{
+  width: 49.5%;
+}
+
+/*Productos destacados*/
+#productosDestacados{
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+#productosDestacados h4{
+  text-align: center;
+}
+
+#productosDestacados .contenedor{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#productosDestacados article{
+  margin: 1.5%;
+}
+
+#productosDestacados img{
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  border: solid gray 2px;
+}
+
+/*Noticias*/
+#noticias{
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+#noticias .contenedor{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+#noticias article{
+  margin-top: 15px;
+}
+
+#noticias img{
+  width: 100%;
+  max-width: 400px;
+  float: left;
+  margin-right: 20px;
+}

@@ -1,0 +1,21 @@
+#banner {
+    margin-top: 50px;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+}
+
+#banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color:black;
+}
+
+#banner h1 {
+    font-size: 30px;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/moduloproductos.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/./moduloproducto.css">
+    <title>Modulos de Hombres</title>
+</head>
+<body>
+<div class="container-sm">
+    <div class="container-sm p-4 bg-dark text-white h-auto my-2 w-50">
+        <h1>Agregar un nuevo producto</h1>
+        <form>
+            <div class="mb-3 my-5 mb-2 w-50">
+                <label for="Nombre_Producto" class="form-label">Nombre del Producto</label>
+                <input type="text" class="form-control" id="Nombre_Producto" aria-describedby="emailHelp">
+
+            </div>
+            <div class="my-5 mb-2 w-50">
+                <label for="Cantidad_producto" class="form-label">Cantidad</label>
+                <input type="text" class="form-control w-25" id="Cantidad_producto" aria-describedby="emailHelp">
+            </div>
+            <div class="dropdown mt-5">
+                <button type="button" class="btn btn-secondary dropdown-toggle" id="Tipo_Producto_Dropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    Tipo de Producto
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="" class="dropdown-item">Pantalones</a></li>
+                    <li><a href="" class="dropdown-item">Camisas</a></li>
+                    <li><a href="" class="dropdown-item">Calzado</a></li>
+                </ul>
+            </div>
+            <div class="mb-3 my-5 mb-2">
+                <label for="Talla_numero" class="form-label">Talla o Numero</label>
+                <input type="text" class="form-control w-25" id="Talla_numero" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 my-5 mb-2">
+                <label for="Precio_input" class="form-label">Precio</label>
+                <input type="text" class="form-control w-25" id="Precio_input" aria-describedby="emailHelp">
+            </div>
+            <div class="my-5 mb-2 w-100">
+                <label for="color_picker" class="form-label">Color</label>
+                <input type="text" class="form-control w-25" id="color_picker">
+            </div>
+            <div class="my-5 mb-2 w-100">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <button type="submit" class="btn btn-primary bg-white text-black-50 border-dark mt-5 "
+                    onclick="guardar_localstorage()">Confirmar</button>
+
+        </form>
+    </div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
