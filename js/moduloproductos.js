@@ -28,14 +28,36 @@ function guardar_localstorage(){
     reader.readAsDataURL(document.getElementById("customFile").files[0])
 }
 
-function agregar_imagen(){
-    var imglocal = JSON.parse(localStorage.getItem("1"));
-    console.log(imglocal);
-    var divresult = document.getElementById("result")
+function revision_imagen(){
+    var div_inner = document.getElementById("div_jeans_inner")
+    var image_numbers = localStorage.length
+    var div_items
+    if (image_numbers<4){
+        primeros_productos(image_numbers, div_inner)
+    }
 
-    var img = document.createElement("img");
-    img.src= imglocal.img;
-    divresult.appendChild(img)
 
+    // var img = document.createElement("img");
+    // img.src= imglocal.img;
+}
+
+function primeros_productos(numero_productos,div_inner ){
+    var i=0;
+    var div_active = document.createElement("div")
+    div_active.className = "carousel_item active"
+    var div_row = document.createElement("div")
+    div_row.className = "row"
+    Object.keys(localStorage).forEach(function(key){
+        i++;
+        console.log(i);
+        console.log(key);
+        if (i < 4){
+            var producto = localStorage.getItem(key)
+            var img_add = document.createElement("img")
+            img_add.src = producto.img
+
+
+        }
+    });
 }
 
