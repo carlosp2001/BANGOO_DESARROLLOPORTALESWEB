@@ -1,10 +1,11 @@
-function Producto(nombre, cantidad, tipo, talla, color, categoria, img){
+function Producto(nombre, cantidad, tipo, talla, color, categoria,  precio, img){
     this.nombre = nombre
     this.cantidad =  cantidad
     this.tipo = tipo
     this.talla = talla
     this.color = color
     this.categoria = categoria
+    this.precio = precio
     this.img = img
 }
 
@@ -16,48 +17,46 @@ function guardar_localstorage(){
     var input_tipo = document.getElementById("tipopr_select");
     var input_color = document.getElementById("color_picker");
     var input_talla = document.getElementById("Talla_numero");
+    var input_precio = document.getElementById("Precio_input");
     var input_categoria = document.getElementById("categoria-select");
-
+    console.log(input_precio.value)
     reader.addEventListener('load', function (){
         if(this.result){
-            producto = new Producto(input_nombre.value, input_cantidad.value, input_tipo.value, input_color.value,
-                input_talla.value, input_categoria.value, img = this.result)
+            producto = new Producto(nombre=input_nombre.value, cantidad=input_cantidad.value,
+                tipo=input_tipo.value, talla=input_talla.value,color=input_color.value,
+                categoria=input_categoria.value, precio=input_precio.value, img = this.result)
             localStorage.setItem(((localStorage.length+1).toString()), JSON.stringify(producto));
         }
     })
     reader.readAsDataURL(document.getElementById("customFile").files[0])
 }
 
-function revision_imagen(){
-    var div_inner = document.getElementById("div_jeans_inner")
-    var image_numbers = localStorage.length
-    var div_items
-    if (image_numbers<4){
-        primeros_productos(image_numbers, div_inner)
-    }
 
 
-    // var img = document.createElement("img");
-    // img.src= imglocal.img;
-}
 
-function primeros_productos(numero_productos,div_inner ){
-    var i=0;
-    var div_active = document.createElement("div")
-    div_active.className = "carousel_item active"
-    var div_row = document.createElement("div")
-    div_row.className = "row"
+function actualizar_catalogo(div_add,tipo_ropa, genero){
+    var div_inner = document.getElementById(div_add)
     Object.keys(localStorage).forEach(function(key){
-        i++;
-        console.log(i);
-        console.log(key);
-        if (i < 4){
-            var producto = localStorage.getItem(key)
-            var img_add = document.createElement("img")
-            img_add.src = producto.img
+        var producto =JSON.parse(localStorage.getItem(key));
+        if (producto.tipo==tipo_ropa && producto.categoria==genero) {
+            var div_card = document.createElement("div");
+            div_card.className = "card";
 
+            var article = document.createElement("article");
 
+            var imgarticle = document.createElement("img")
+            imgarticle.src = producto.img;
+            imgarticle.className = "imgcatalogo";
+            var precio_h4 = document.createElement("h4")
+            precio_h4.textContent = "Precio: " + producto.precio+" $" ;
+            console.log(producto.nombre);
+            article.appendChild(imgarticle);
+            article.appendChild(precio_h4)
+            div_card.appendChild(article);
+            div_inner.appendChild(div_card);
         }
+
     });
+
 }
 
