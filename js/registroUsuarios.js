@@ -27,27 +27,32 @@ function addNewUser(){
     console.log(newUser);
     registerUsers.push(newUser);
     localStorage.setItem('registerUsersList', JSON.stringify(registerUsers));
+    alert('¡Usuario registrado con exito!')
 }
 
 //Verifica si todos los campos son correctos
 function validarCampos(){
     
-    if(validarUsuario()){
-       alert('El usuario que ingreso no esta disponible');
-       vusuario.value = "";
-       vusuario.focus(); 
+    if(validarCamposVacios()){
+        if(validarUsuario()){
+            alert('El usuario que ingreso no esta disponible');
+            vusuario.value = "";
+            vusuario.focus(); 
+         }
+         else{
+             if(validarContrasenas()){
+                 addNewUser();
+             }
+             else{
+                 alert('Las contraseñas no coinciden');
+                 vcontrasenaV.value = "";
+                 vcontrasenaV.focus();
+             }
+         }
     }
     else{
-        if(validarContrasenas()){
-            addNewUser();
-        }
-        else{
-            alert('Las contraseñas no coinciden');
-            vcontrasenaV.value = "";
-            vcontrasenaV.focus();
-        }
+        alert('Por favor, llene todos los campos.');
     }
-
 }
 
 //Si encuentra un registro con el mismo usuario retorna un true
@@ -76,4 +81,16 @@ function validarContrasenas(){
     }
 
     return validas;
+}
+
+//Si todos los campos estan llenos retorna un true
+function validarCamposVacios(){
+    var llenos = false;
+
+    if(vnombre.value != "" && vusuario.value != "" && vcorreo.value != "" &&
+    vcontrasena.value != "" && vcontrasenaV != "" && vfechaNacimiento != ""){
+        llenos = true;
+    }
+
+    return llenos;
 }
