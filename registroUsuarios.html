@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/registroUsuarios.css">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <title>Registrar usuario</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="./index.html" id="Logo"><img src="./img/logo1.png" alt="logo"></a>
+            <input type="checkbox" name="" id="menuBar">
+            <label class="icon-menu" for="menuBar"></label>
+            <nav class="menu">
+                <a href="./index.html">Inicio</a>
+                <a href="./mujeres.html">Mujeres</a>
+                <a href="./seccionhombres.html">Hombres</a>
+                <a href="./Contacto.html">Contacto</a>
+                <a href="./Login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">               
+                    <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded">                                    
+                        <div class="p-3 m-4 bg-primary bg-dark fw-bold text-white">Registro de usuarios</div>
+                        <form class="g-3 needs-validation" novalidate>
+                            <div class="m-4 position-relative">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                                <!-- Mensajes para validación   -->
+                                <div class="valid-tooltip">¡Campo válido!</div>
+                                <div class="invalid-tooltip">Debe completar los datos.</div>
+                            </div>
+                            <div class="m-4 position-relative">
+                                <label for="usuario" class="form-label">Usuario</label>
+                                <input type="text" class="form-control" id="usuario" required>
+                                <!-- Mensajes para validación   -->
+                                <div class="valid-tooltip">¡Campo válido!</div>
+                                <div class="invalid-tooltip">Debe completar los datos.</div>
+                            </div>
+                            <div class="m-4 position-relative">
+                                <label for="correo" class="form-label">Correo electronico</label>
+                                <input type="mail" class="form-control" id="correo" required>
+                                <!-- Mensajes para validación   -->
+                                <div class="valid-tooltip">¡Campo válido!</div>
+                                <div class="invalid-tooltip">Debe completar los datos.</div>
+                            </div>
+                            <div class="m-4 position-relative">
+                                <label for="contrasena" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="contrasena" required>
+                                <!-- Mensajes para validación   -->
+                                <div class="valid-tooltip">¡Campo válido!</div>
+                                <div class="invalid-tooltip">Debe completar los datos.</div>
+                            </div>
+                            <div class="m-4 position-relative">
+                                <label for="contrasenaV" class="form-label">Validar contraseña</label>
+                                <input type="password" class="form-control" id="contrasenaV" required>
+                                <!-- Mensajes para validación   -->
+                                <div class="valid-tooltip">¡Campo válido!</div>
+                                <div class="invalid-tooltip">Debe completar los datos.</div>
+                            </div>
+                            <div class="col-4 m-4 position-relative">
+                                <label for="pais" class="form-label">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" name="fechaNacimiento" id="fechaNacimiento" required>
+                                <!-- Mensajes para validación   -->
+                                <div class="valid-tooltip">¡Campo válido!</div>
+                                <div class="invalid-tooltip">Debe completar los datos.</div>
+                            </div>                   
+                            <div class="row m-4">
+                                <button class="btn btn-warning fw-bold float-end" type="submit" onclick="addNewUser()">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+    <footer>
+        <div class="contenedor">
+            <div class="sociales">
+                <a class="icon-facebook-squared" href="https://www.facebook.com"></a>
+                <a class="icon-twitter" href="https://www.twitter.com"></a>
+                <a class="icon-instagram" href="https://www.instagram.com"></a>
+            </div>
+            <p class="copy">&copy; 2021 Bangoo,inc.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>        
+        (function () {
+          'use strict'
+        
+          // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+          var forms = document.querySelectorAll('.needs-validation')
+        
+          //Recorremos los forms y evitamos en envío sin validacion
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+              }, false)
+            })
+        })()
+    </script>
+    <script src="./js/registroUsuarios.js"></script>
+</body>
+</html>
