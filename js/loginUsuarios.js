@@ -54,6 +54,7 @@ function iniciarSesion(){
     bAcceso = validarCredenciales(sCorreo,sContrasena);
     
     if(bAcceso == true){
+        alert('¡Bienvenido '+sessionStorage.getItem('usuarioActivo')+'!')
         ingresar();
     }
     else{
