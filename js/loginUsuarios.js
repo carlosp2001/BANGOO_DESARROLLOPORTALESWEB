@@ -20,9 +20,10 @@ function validarCredenciales(pUsuario, pContrasena){
     var bAcceso = false;
 
     for(var i = 0; i < listaUsuarios.length; i++){
-        if(pUsuario == listaUsuarios[i].usuario && pContrasena == listaUsuarios[i].contrasena){
+        if(pUsuario == listaUsuarios[i].usuario && pContrasena == listaUsuarios[i].contrasena && listaUsuarios[i].estado == 1){
             bAcceso = true;
             sessionStorage.setItem('usuarioActivo', listaUsuarios[i].nombre);
+            sessionStorage.setItem('nombreUsuario', listaUsuarios[i].usuario);
             sessionStorage.setItem('rolUsuarioActivo', listaUsuarios[i].rol);
         }
     }

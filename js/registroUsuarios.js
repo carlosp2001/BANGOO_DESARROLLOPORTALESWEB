@@ -21,7 +21,8 @@ function addNewUser() {
         correo: vcorreo.value,
         contrasena: vcontrasena.value,
         fechaNacimiento: vfechaNacimiento.value,
-        rol: 1
+        rol: 1,
+        estado: 1
     };
 
     console.log(newUser);
@@ -79,7 +80,7 @@ function validarUsuario() {
     return existe;
 }
 
-//Valida si las contraseñas ingresadas son iguales
+//Valida si las contraseñas ingresadas son iguales, si son iguales retorna un true
 function validarContrasenas() {
     var validas = false;
 
