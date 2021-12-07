@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height: 75px;
+    height: 105px;
     background: white;
     color: black;
   
@@ -8,6 +8,27 @@ header{
     top: 0;
     left: 0;
     z-index: 100;
+  }
+
+  header .submenu{
+    width: 100%;
+    height: 30px;
+    background: whitesmoke;
+    padding: 5px;
+    padding-right: 1%;
+  }
+
+  header .submenu a{
+    position: relative;
+    margin-right: 15px;
+    float: right;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+
+  header .submenu img{
+    height: 20px;
   }
   
   header .contenedor{
