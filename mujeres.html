@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Mujeres</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/fontello.css">
-        <link rel="stylesheet" href="./css/mujeres.css">
-    </head>
-    <body>
-        <header>
-            <div class="contenedor">
-                <a href="index.html" id="Logo"><img src="./img/logo1.png" alt="logo"></a>
-                <input type="checkbox" name="" id="menuBar">
+
+<head>
+    <title>Mujeres</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/mujeres.css">
+    <link rel="stylesheet" href="./css/carrito.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="index.html" id="Logo"><img src="./img/logo1.png" alt="logo"></a>
+            <input type="checkbox" name="" id="menuBar">
             <label class="icon-menu" for="menuBar"></label>
             <nav class="menu">
                 <a href="./index.html">Inicio</a>
@@ -19,72 +25,147 @@
                 <a href="./seccionhombres.html">Hombres</a>
                 <a href="./Contacto.html">Contacto</a>
                 <a href="./Login.html">Login</a>
+
+                <div class="menu">
+                    <ul>
+                        <li class="submenu">
+                            <img src="./img/carrito.png" alt="">
+                            <div id="carrito">
+                                <p class="vacio">Tus Productos</p>
+                                <div class="table-responsive-sm">
+                                    <table id="lista-carrito" class="table table-borderless table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Precio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                    <button id="vaciar-carrito" type="button"
+                                        class="btn btn-success btn-lg btn-block">Comprar</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
             </nav>
+        </div>
+    </header>
+    <main>
+        <section id="banner">
+            <img src="img/nike Collage1.jpg">
+            <div class="contenedor">
+                <h1>Ropa Mujer</h1>
+                <p>Toda la ropa que desee a un click</p>
             </div>
-        </header>
-        <main>
-            <section id="banner">
-                <img src="img/nike Collage1.jpg">
-                <div class="contenedor">
-                    <h1>Ropa Mujer</h1>
-                    <p>Toda la ropa que desee a un click</p>
-                </div>
-            </section>
-            <section id="bienvenidos">
-                <div class="contenedor">
-                    <h2>Ropa para mujeres</h2>
-                    <p>Dentro de este mundo globalizado, las empresas para sobrevivir y las nuevas <br>
-                       inversiones que ingresan al mercado para poder desarrollarse, deben de orientar sus <br>
-                       esfuerzos a ofrecer servicios de valor agregando o nuevas formas a los compradores, pero<br>
-                       manteniendo la calidad y los niveles de precios
-                    </p>
-                </div>
-            </section>
+        </section>
+        <section id="bienvenidos">
+            <div class="contenedor">
+                <h2>Ropa para mujeres</h2>
+                <p>Dentro de este mundo globalizado, las empresas para sobrevivir y las nuevas <br>
+                    inversiones que ingresan al mercado para poder desarrollarse, deben de orientar sus <br>
+                    esfuerzos a ofrecer servicios de valor agregando o nuevas formas a los compradores, pero<br>
+                    manteniendo la calidad y los niveles de precios
+                </p>
+            </div>
+        </section>
+        <div id="lista-productos">
             <section id="productosNuevo">
                 <h3>Lo nuevo</h3>
+
                 <div class="contenedor">
-                    <article>
-                        <img src="./img/ok-mg-1964_5099593_20190527101123--624x936.jpg" width="350" height="350">
-                        <h4>Conjunto KAPPA 30.00$</h4>
-                    </article>
-                    <article>
-                        <img src="./img/nigeria-long-sleeve-dress-vestidos-nike-mujer-768x543.jpg" width="350" height="350">
-                        <h4>Vestido 15.95$</h4>
-                    </article>
-                    <article>
-                        <img src="./img/tenis-nike-mujer-D_NQ_NP_871179-MCO29407598664_022019-F.jpg" width="350" height="350">
-                        <h4>Traje Baño 20.00$</h4>
-                    </article>
+                    <div class="card-deck">
+                        <article>
+                            <div class="card" style="width: 18rem; background: none; border: none;">
+                                <img src="./img/ok-mg-1964_5099593_20190527101123--624x936.jpg" width="350"
+                                    height="350">
+                                <div class="card-body">
+                                    <h5>Conjunto KAPPA</h5>
+                                    <p class="card-text" style="color: black;"> 30.00$$</p>
+                                    <a href="#" data-id="13" class="btn btn-dark agregar-carrito">Comprar</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="card" style="width: 18rem; background: none; border: none;">
+                                <img src="./img/nigeria-long-sleeve-dress-vestidos-nike-mujer-768x543.jpg" width="350"
+                                    height="350">
+                                <div class="card-body">
+                                    <h5>Vestido</h5>
+                                    <p class="card-text" style="color: black;"> 15.95$</p>
+                                    <a href="#" data-id="14" class="btn btn-dark agregar-carrito">Comprar</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="card" style="width: 18rem; background: none; border: none;">
+                                <img src="./img/tenis-nike-mujer-D_NQ_NP_871179-MCO29407598664_022019-F.jpg" width="350"
+                                    height="350">
+                                <div class="card-body">
+                                    <h5>Tenis</h5>
+                                    <p class="card-text" style="color: black;"> 20.00$</p>
+                                    <a href="#" data-id="15" class="btn btn-dark agregar-carrito">Comprar</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
             <br><br>
             <section id=productoVendido>
                 <h3>Lo mas vendido</h3>
                 <div class="contenedor">
-                    <article>
-                        <img src="./img/1.png" width="350" height="350">
-                        <h5>Tennis 20$</h5>
-                    </article>
-                    <article>
-                        <img src="./img/2.png" width="350" height="350">
-                        <h5>leggins 20$</h5>
-                    </article>
-                    <article>
-                        <img src="./img/OIP.jpg" width="350" height="350">
-                        <h5>TENNIS 20$</h5>
-                    </article>
+                    <div class="card-deck">
+                        <article>
+                            <div class="card" style="width: 18rem; background: none; border: none;">
+                                <img src="./img/1.png" width="350" height="350">
+                                <div class="card-body">
+                                    <h5>Tennis</h5>
+                                    <p class="card-text" style="color: black;"> 20.00$</p>
+                                    <a href="#" data-id="16" class="btn btn-dark agregar-carrito">Comprar</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="card" style="width: 18rem; background: none; border: none;">
+                                <img src="./img/2.png" width="350" height="350">
+                                <div class="card-body">
+                                    <h5>Leggins</h5>
+                                    <p class="card-text" style="color: black;"> 20.00$</p>
+                                    <a href="#" data-id="17" class="btn btn-dark agregar-carrito">Comprar</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="card" style="width: 18rem; background: none; border: none;">
+                                <img src="./img/OIP.jpg" width="350" height="350">
+                                <div class="card-body">
+                                    <h5>Tennis</h5>
+                                    <p class="card-text" style="color: black;"> 20.00$</p>
+                                    <a href="#" data-id="18" class="btn btn-dark agregar-carrito">Comprar</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
-        </main>
-        <footer>
-            <div class="contenedor">
-                <div class="sociales">
-                    <a class="icon-facebook-squared" href="https://www.facebook.com"></a>
-                    <a class="icon-twitter" href="https://www.twitter.com"></a>
-                    <a class="icon-instagram" href="https://www.instagram.com"></a>
-                </div>
-                <p class="copy" >&copy; 2021 Bangoo,inc.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor">
+            <div class="sociales">
+                <a class="icon-facebook-squared" href="https://www.facebook.com"></a>
+                <a class="icon-twitter" href="https://www.twitter.com"></a>
+                <a class="icon-instagram" href="https://www.instagram.com"></a>
             </div>
-        </footer>
-    </body>
+            <p class="copy">&copy; 2021 Bangoo,inc.</p>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+
 </html>
