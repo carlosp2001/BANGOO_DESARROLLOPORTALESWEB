@@ -15,7 +15,7 @@ function addNewUser() {
     }
 
     var newUser = {
-        id: localStorage.length + 1,
+        id: registerUsers.length + 1,
         nombre: vnombre.value,
         usuario: vusuario.value,
         correo: vcorreo.value,
