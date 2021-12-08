@@ -28,7 +28,7 @@ function addNewUser() {
     console.log(newUser);
     registerUsers.push(newUser);
     localStorage.setItem('registerUsersList', JSON.stringify(registerUsers));
-    alert('¡Usuario registrado con exito!')
+    alert('¡Usuario registrado con exito!');
 }
 
 //Verifica si todos los campos son correctos
