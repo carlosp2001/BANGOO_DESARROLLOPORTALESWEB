@@ -25,7 +25,7 @@ function seleccionarFavorito(e) {
 function leerDatosfavorito(favorito) {
     const infofavorito = {
         imagen: favorito.querySelector('img').src,
-        //titulo: favorito.querySelector('h5').textContent,
+        titulo: favorito.querySelector('h5').textContent,//
         //precio: favorito.querySelector('p').textContent,
         id: favorito.querySelector('a').getAttribute('data-id')
     }
@@ -39,9 +39,8 @@ function insertarfavorito(favorito) {
     <td>
         <img src="${favorito.imagen}" width = 100>
     </td>
-    <td>
-    <a href="#" class="borrar-favorito" data-id="${favorito.id}">x</a>
-    </td>
+    <td>${favorito.titulo} </td>
+    
     `;
 
     listafavoritos.appendChild(row);
@@ -106,6 +105,7 @@ function leerLocalStorage() {
             <td>
                 <img src="${favorito.imagen}" width = 100>
             </td>
+            <td>${favorito.titulo} </td>
             <td>
             <a href = "a" class="borrar-favorito" data-id="${favorito.id}">x</a>
             </td>
