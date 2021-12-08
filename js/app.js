@@ -1,7 +1,9 @@
+
 const carrito = document.getElementById("carrito");
 const productos = document.getElementById("lista-productos");
 const listaProductos = document.querySelector("#lista-carrito tbody");
 const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
+
 
 cargarEventListeners();
 
@@ -17,18 +19,20 @@ function cargarEventListeners() {
 }
 
 function comprarProducto(e) {
-    e.preventDefault();
-    if (e.target.classList.contains('agregar-carrito')) {
-        const producto = e.target.parentElement.parentElement;
-        leerDatosProducto(producto);
+    e.preventDefault();//evita que arroje url
 
-    }
+        if (e.target.classList.contains('agregar-carrito')) {
+            const producto = e.target.parentElement.parentElement;
+            leerDatosProducto(producto);
+    
+        }
+   
 }
 
 function leerDatosProducto(producto) {
     const infoProducto = {
         imagen: producto.querySelector('img').src,
-        titulo: producto.querySelector('h5').textContent,
+        //titulo: producto.querySelector('h5').textContent,
         precio: producto.querySelector('p').textContent,
         id: producto.querySelector('a').getAttribute('data-id')
     }
@@ -37,15 +41,15 @@ function leerDatosProducto(producto) {
 }
 
 function insertarCarrito(producto) {
+
     const row = document.createElement('tr');
     row.innerHTML = `
     <td>
         <img src="${producto.imagen}" width = 100>
     </td>
-    <td>${producto.titulo} </td>
     <td>${producto.precio} </td>
     <td>
-    <a href="#" class="borrar-producto" data-id="${producto.id}">x</a>
+    <a href="#" class="borrar-producto" style="color: white;" data-id="${producto.id}">x</a>
     </td>
     `;
 
@@ -53,18 +57,20 @@ function insertarCarrito(producto) {
     guardarProductoLocalStorage(producto);
 }
 
+
+
 function eliminarProducto(e) {
     e.preventDefault();
 
     let producto,
         productoId;
+
     if (e.target.classList.contains('borrar-producto')) {
         e.target.parentElement.parentElement.remove();
         producto = e.target.parentElement.parentElement;
         productoId = producto.querySelector('a').getAttribute('data-id');
     }
     eliminarProductoLocalStorage(productoId);
-
 }
 
 //elimina los productos del carrito
@@ -100,24 +106,25 @@ function obtenerProductosLocalStorage() {
     return productosLS;
 }
 
+
+
 function leerLocalStorage() {
     let productosLS;
 
     productosLS = obtenerProductosLocalStorage();
 
-    productosLS.array.forEach(function (producto) {
+    productosLS.forEach(function (producto) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
                 <img src="${producto.imagen}" width = 100>
             </td>
-            <td>${producto.titulo}</td>
             <td>${producto.precio}</td>
             <td>
-            <a href = "a" class="borrar-producto" data-id="${producto.id}">x</a>
+            <a href="#" class="borrar-producto" data-id="${producto.id}">x</a>
             </td>
         `;
-        listaProductos.appendChild(row);
+       listaProductos.appendChild(row);
 
     });
 }
@@ -128,12 +135,13 @@ function eliminarProductoLocalStorage(producto){
 
     productosLS = obtenerProductosLocalStorage();
 
-    productosLS.forEach(function(productosLS,seccionhombres){
-        if (productosLS.id === producto) {
-            productosLS.splice(seccionhombres,1);
+    productosLS.forEach(function(productoLS,index){
+        if (productoLS.id === producto) {
+            productosLS.splice(index,1);
         }
     });
     localStorage.setItem('productos',JSON.stringify(productosLS));
+
 
 }
 
@@ -141,3 +149,4 @@ function vaciarLocalStorage(){
     localStorage.clear();
 
 }
+

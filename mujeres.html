@@ -30,28 +30,28 @@
                     <ul>
                         <li class="submenu">
                             <img src="./img/carrito.png" alt="">
-                            <div id="carrito">
-                                <p class="vacio">Tus Productos</p>
+                            <div id="carrito" class="vaciar">
+                                <button class="btn btn-outline-danger btn-lg btn-block"  id="vaciar-carrito" style="margin-bottom: 10px; ;">Vaciar carrito</button>
                                 <div class="table-responsive-sm">
-                                    <table id="lista-carrito" class="table table-borderless table-dark">
-                                        <thead>
-                                            <tr>
-                                                <th>Imagen</th>
-                                                <th>Precio</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
+                                <table id="lista-carrito" class="table table-borderless table-dark">
+                                    <thead>
+                                        <tr>
+                                            <th>Producto</th>
+                                            <th>Precio</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
-                                        </tbody>
-                                    </table>
-                                    <button id="vaciar-carrito" type="button"
-                                        class="btn btn-success btn-lg btn-block">Comprar</button>
-                                </div>
+                                    </tbody>
+                                </table>
+                                <button type="button"
+                                    class="btn btn-success btn-lg btn-block">Comprar</button>
                             </div>
+                        </div>
                         </li>
                     </ul>
                 </div>
-
             </nav>
         </div>
     </header>
