@@ -53,6 +53,7 @@ function guardarCambios(){
             listaUsuarios[i].correo = vcorreo.value;
             listaUsuarios[i].contrasena = vcontrasena.value;
             listaUsuarios[i].fechaNacimiento = vfechaNacimiento.value;
+            sessionStorage.setItem('usuarioActivo', listaUsuarios[i].nombre);
         }
     }
 
