@@ -6,7 +6,7 @@
 }
 
 main{
-  min-height: calc(100vh - 150px - 120px);
+  min-height: calc(100vh - 180px - 120px);
 }
 
 .form-login{
@@ -14,7 +14,7 @@ main{
     background: white;
     padding: 30px;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 180px;
     border-radius: 4px;
     border: 1px solid rgb(53, 50, 50);
     border-color: grey;
